@@ -8,6 +8,8 @@ export const GlobalCss = createGlobalStyle`
     color: ${(props) => props.theme.text};
     font-family: 'UbuntuMono';
     letter-spacing: 0.095rem;
+    list-style: none;
+    text-decoration: none;
   }
 
   @font-face {

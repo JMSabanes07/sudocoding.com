@@ -5,9 +5,6 @@ const Header = () => {
   return (
     <PageHeader>
       <h1>$ Sudo</h1>
-      <ul>
-        <li>Home</li>
-      </ul>
     </PageHeader>
   )
 }
