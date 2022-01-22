@@ -7,7 +7,7 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     color: ${(props) => props.theme.text};
     font-family: 'UbuntuMono';
-    letter-spacing: 0.095rem;
+    letter-spacing: 0.1rem;
     list-style: none;
     text-decoration: none;
   }

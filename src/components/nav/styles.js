@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
+  grid-area: nav;
   align-self: center;
-  position: absolute;
-  left: 6rem;
-  z-index: 999;
+  padding: 2rem;
 `
 
 export const List = styled.ul`

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const PageHeader = styled.header`
+  position: absolute;
+  width: 100%;
   display: grid;
   align-self: flex-start;
   justify-items: center;
