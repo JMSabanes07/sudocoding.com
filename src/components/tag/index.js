@@ -1,12 +1,12 @@
-import { TagContainer, Wrapper } from './styles'
+import { TagContainer, OpenTag, CloseTag, Children } from './styles'
 
-const Tag = ({ children, tag, position }) => {
+const Tag = ({ children, tag, position = 'inline' }) => {
   return (
-    <Wrapper>
-      <TagContainer tag={tag} position={position || 'inline'}>
-        {children}
-      </TagContainer>
-    </Wrapper>
+    <TagContainer position={position}>
+      <OpenTag position={position}>{`<${tag}>`}</OpenTag>
+      <Children position={position}>{children}</Children>
+      <CloseTag position={position}>{`</${tag}>`}</CloseTag>
+    </TagContainer>
   )
 }
 

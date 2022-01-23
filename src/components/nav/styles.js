@@ -13,6 +13,5 @@ export const List = styled.ul`
   li {
     cursor: pointer;
     user-select: none;
-    font-size: 1.1rem;
   }
 `

@@ -1,14 +1,14 @@
 import Header from 'components/header'
 import Nav from 'components/nav'
 
-//components
+// components
 import { LayoutContainer } from './styles'
 
 const Layout = ({ children }) => {
   return (
     <LayoutContainer>
       <Header />
-      <Nav />
+      {/* <Nav /> */}
       {children}
     </LayoutContainer>
   )

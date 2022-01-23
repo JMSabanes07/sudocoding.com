@@ -8,54 +8,61 @@ export const TagContainer = styled.div`
   display: flex;
   flex-basis: auto;
   position: relative;
-  ::after,
-  ::before {
-    position: absolute;
-    color: white;
-    font-size: 0.85rem;
-    color: ${(props) => props.theme.textDark};
-  }
-  ::after {
-    padding-right: 0.5rem;
-    ${(props) => {
-      if (!props.tag) return `content: '<p>'`
-      return `content: '<${props.tag}>'`
-    }};
-    ${(props) => {
-      if (props.position === 'inline')
-        return `
-          align-self: center;
-          right: 100%;
-        `
-      if (props.position === 'left' || props.position === 'leftRight')
-        return `
-          bottom: 100%;
-          right: 100%;
-        `
-    }}
-  }
-  ::before {
-    padding-left: 0.5rem;
-    ${(props) => {
-      if (!props.tag) return `content: '</p>'`
-      return `content: '</${props.tag}>'`
-    }};
-    ${(props) => {
-      if (props.position === 'inline')
-        return `
-          align-self: center;
-          left: 100%;
-        `
-      if (props.position === 'left')
-        return `
-          top: 100%;
-          right: 100%;
-        `
-      if (props.position === 'leftRight')
-        return `
-          top: 100%;
-          left: 100%;
-        `
-    }};
-  }
+  ${(props) => {
+    if (props.position === 'inline')
+      return `
+        gap: 1rem;
+        flex-direction: row;
+      `
+    if (props.position === 'left')
+      return `
+        gap: .5rem;
+        flex-direction: column;
+      `
+    if (props.position === 'leftRight')
+      return `
+        gap: .5rem;
+        flex-direction: column;
+      `
+  }}
+`
+
+export const OpenTag = styled.span`
+  font-size: 0.85rem;
+  color: ${(props) => props.theme.textDark};
+  /* padding-right: 1rem; */
+  ${(props) => {
+    if (props.position === 'inline')
+      return `
+        align-self: center;
+      `
+    if (props.position === 'leftRight')
+      return `
+        align-self: flex-start;
+      `
+  }}
+`
+export const CloseTag = styled.span`
+  font-size: 0.85rem;
+  color: ${(props) => props.theme.textDark};
+  /* padding-left: 1rem; */
+  ${(props) => {
+    if (props.position === 'inline')
+      return `
+        align-self: center;
+      `
+    if (props.position === 'leftRight')
+      return `
+      align-self: flex-end;
+      transform: translateX(2rem)
+      `
+  }}
+`
+export const Children = styled.span`
+  ${(props) => {
+    if (props.position === 'left' || props.position === 'leftRight')
+      return `
+        padding-left: 2rem;
+      `
+  }}
 `

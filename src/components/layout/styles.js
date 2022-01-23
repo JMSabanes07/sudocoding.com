@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: 'nav body';
+  grid-template-columns: 1100px;
+  grid-template-rows: auto 1fr;
   justify-content: center;
   gap: 2rem;
 
