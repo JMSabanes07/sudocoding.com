@@ -53,12 +53,27 @@ export const CloseTag = styled.span`
       `
     if (props.position === 'leftRight')
       return `
-      align-self: flex-end;
-      transform: translateX(2rem)
+        align-self: flex-end;
+        transform: translateX(2rem)
       `
   }}
 `
-export const Children = styled.span`
+export const Children = styled.div`
+  * {
+    color: ${(props) => (props.highlight ? props.theme.highlight : '')};
+  }
+  .typing-cursor {
+    ::after {
+      content: '█';
+      animation: cursor 1.1s infinite step-start;
+    }
+
+    @keyframes cursor {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
   ${(props) => {
     if (props.position === 'left' || props.position === 'leftRight')
       return `

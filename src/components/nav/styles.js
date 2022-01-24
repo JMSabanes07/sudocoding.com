@@ -8,8 +8,9 @@ export const NavContainer = styled.nav`
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: row;
+  gap: 3rem;
+  justify-self: ${(props) => props.justifySelf || 'none'};
   li {
     cursor: pointer;
     user-select: none;

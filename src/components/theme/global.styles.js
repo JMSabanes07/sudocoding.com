@@ -26,4 +26,11 @@ export const GlobalCss = createGlobalStyle`
     font-weight: 800;
     font-display: swap;
   }
+
+  html{
+    @media (min-width: 1536px) {
+      font-size: 18px;
+    }
+  }
+
 `

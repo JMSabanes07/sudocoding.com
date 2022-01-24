@@ -18,7 +18,7 @@ const AsciiAnimation = () => {
     play()
     const loop = setInterval(() => {
       play()
-    }, 800)
+    }, 700)
     return () => clearInterval(loop)
   }, [])
 

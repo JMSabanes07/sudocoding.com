@@ -14,8 +14,8 @@ const Header = () => {
           <Link href="/portfolio">{'[2] <Portfolio />'}</Link>
         </li>
       </List>
-      <h1>$ Sudo</h1>
-      <List>
+      <h2>$ SUDO</h2>
+      <List justifySelf="flex-end">
         <li>
           <Link href="/about">{'[3] <About me />'}</Link>
         </li>
