@@ -12,6 +12,7 @@ import {
 } from './index.styles'
 import AsciiAnimation from 'components/animation'
 import Tag from 'components/tag'
+import { Button } from 'components/buttons'
 
 const Home = () => {
   return (
@@ -50,8 +51,12 @@ const Home = () => {
         <AsciiAnimation />
       </PortadaContainer>
       <ButtonContainer>
-        <Link href="/contact">[1] Get in touch</Link>
-        <Link href="/portfolio">[2] See my work</Link>
+        <Link href="/contact">
+          <Button isActive>[1] Get in touch</Button>
+        </Link>
+        <Link href="/portfolio">
+          <Button>[2] See my work</Button>
+        </Link>
       </ButtonContainer>
     </HomeContainer>
   )
