@@ -30,7 +30,7 @@ const Header = () => {
         <li>
           <Link href="/about">
             <Button isActive={router.asPath === '/about'}>
-              {'[3] <About me />'}
+              {'[3] <About us />'}
             </Button>
           </Link>
         </li>

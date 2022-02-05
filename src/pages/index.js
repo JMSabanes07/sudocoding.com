@@ -4,19 +4,15 @@ import Link from 'next/link'
 import TypeAnimation from 'react-type-animation'
 
 // components
-import {
-  HomeContainer,
-  PortadaContainer,
-  Wrapper,
-  ButtonContainer,
-} from './index.styles'
+import { PortadaContainer, Wrapper } from './index.styles'
+import { PageContainer } from 'components/theme/pageContainer'
 import AsciiAnimation from 'components/animation'
 import Tag from 'components/tag'
-import { Button } from 'components/buttons'
+import { Button, ButtonContainer } from 'components/buttons'
 
 const Home = () => {
   return (
-    <HomeContainer>
+    <PageContainer>
       <Head>
         <title>$ Sudo - Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -50,7 +46,7 @@ const Home = () => {
         </Wrapper>
         <AsciiAnimation />
       </PortadaContainer>
-      <ButtonContainer>
+      <ButtonContainer padding="10rem 0 2rem 0">
         <Link href="/contact">
           <Button isActive>[1] Get in touch</Button>
         </Link>
@@ -58,7 +54,7 @@ const Home = () => {
           <Button>[2] See my work</Button>
         </Link>
       </ButtonContainer>
-    </HomeContainer>
+    </PageContainer>
   )
 }
 

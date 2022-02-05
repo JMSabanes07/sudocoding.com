@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps, router }) {
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={router.route}
-            initial={{ y: '100vh' }}
-            animate={{ y: 0 }}
-            exit={{ y: '-100vh' }}
+            initial={{ x: '100vw' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100vw' }}
             style={{ display: 'flex' }}
           >
             <Component {...pageProps} />

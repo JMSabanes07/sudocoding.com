@@ -10,6 +10,10 @@ export const GlobalCss = createGlobalStyle`
     letter-spacing: 0.1rem;
     list-style: none;
     text-decoration: none;
+    ::selection {
+      color: ${(props) => props.theme.bg};
+      background: ${(props) => props.theme.highlight};
+    }
   }
 
   @font-face {
@@ -30,6 +34,19 @@ export const GlobalCss = createGlobalStyle`
   html{
     @media (min-width: 1536px) {
       font-size: 18px;
+    }
+  }
+
+  .typing-cursor {
+    ::after {
+      content: '█';
+      animation: cursor 1.1s infinite step-start;
+    }
+
+    @keyframes cursor {
+      50% {
+        opacity: 0;
+      }
     }
   }
 
