@@ -12,7 +12,7 @@ import { Button, ButtonContainer } from 'components/buttons'
 
 const Home = () => {
   return (
-    <PageContainer>
+    <PageContainer padding="none">
       <Head>
         <title>$ Sudo - Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -46,7 +46,7 @@ const Home = () => {
         </Wrapper>
         <AsciiAnimation />
       </PortadaContainer>
-      <ButtonContainer padding="10rem 0 2rem 0">
+      <ButtonContainer align="center">
         <Link href="/contact">
           <Button isActive>[1] Get in touch</Button>
         </Link>

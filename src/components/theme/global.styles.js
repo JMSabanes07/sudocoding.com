@@ -30,6 +30,13 @@ export const GlobalCss = createGlobalStyle`
     font-weight: 800;
     font-display: swap;
   }
+  @font-face {
+    font-family: "Lucida Console";
+    src: url("/fonts/LucidaConsole.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
 
   html{
     @media (min-width: 1536px) {

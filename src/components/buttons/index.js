@@ -31,6 +31,7 @@ export const Button = styled.div`
 export const ButtonContainer = styled.section`
   display: flex;
   justify-content: center;
+  align-items: ${(props) => props.align || 'flex-start'};
   gap: 5rem;
   padding: ${(props) => props.padding};
 `

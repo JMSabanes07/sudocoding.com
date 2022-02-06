@@ -5,6 +5,8 @@ export const PortadaContainer = styled.section`
   grid-template-columns: auto 400px;
   justify-content: space-between;
   align-items: center;
+
+  margin-top: 2rem;
   h1 {
     font-weight: 800;
     font-size: 3rem;

@@ -4,27 +4,25 @@ import { AnimationContainer } from './styles'
 
 const AsciiAnimation = () => {
   const animarionRef = useRef()
-  const play = async () => {
-    const frames = animation.length
-    for (let i = 0; i < frames; i++) {
-      if (animarionRef.current) {
-        animarionRef.current.innerHTML = `<font><pre>${animation[i]}</pre></font>`
-      }
-      await new Promise((r) => setTimeout(r, 29))
-    }
-  }
 
   useEffect(() => {
-    play()
-    const loop = setInterval(() => {
-      play()
-    }, 700)
-    return () => clearInterval(loop)
+    let frames = animation.length
+    animarionRef.current.innerText = animation[0]
+    const timer = setInterval(() => {
+      frames = frames >= animation.length - 1 ? 0 : frames + 1
+      if (animarionRef.current) {
+        animarionRef.current.innerText = animation[frames]
+      }
+    }, 29)
+    return () => {
+      console.log('returning')
+      console.log(clearTimeout(timer))
+    }
   }, [])
 
   return (
     <AnimationContainer>
-      <div ref={animarionRef}></div>
+      <pre ref={animarionRef}></pre>
     </AnimationContainer>
   )
 }

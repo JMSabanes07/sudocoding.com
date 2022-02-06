@@ -2,15 +2,17 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  align-content: flex-start;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  align-content: space-around;
   grid-template-areas:
-    'title title'
-    'about image';
+    'title'
+    'about';
 `
 export const AboutContainer = styled.div`
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
   align-content: flex-start;
   gap: 0.5em;
 
@@ -25,6 +27,13 @@ export const AboutContainer = styled.div`
   }
 `
 
+export const ContactContainer = styled.div`
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+`
+
 export const Title = styled.div`
   grid-area: title;
   justify-self: center;
@@ -32,11 +41,11 @@ export const Title = styled.div`
   justify-items: center;
   gap: 1rem;
 
-  padding: 4rem;
-  h1 {
+  padding: 2rem;
+  h2 {
     font-size: 2rem;
   }
-  h2 {
+  h1 {
     display: inline;
     font-size: 1.2rem;
     padding: 0.2rem 0.5rem;

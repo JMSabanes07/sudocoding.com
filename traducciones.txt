@@ -1,0 +1,13 @@
+Español
+
+[about > article 1]
+Nosotros diseñamos, maquetamos y programamos las interfaces de tus
+aplicaciones web a travez de "react js", creado por facebook es uno
+de los frameworks mas usados de la actualidad, permitiendo construir
+aplicaciones muy veloces y sin recargas de pagina.
+
+[about > article 2]
+Para que puedas tener una interactividad completa con tus usuarios o
+clientes, administramos tus servidores con bases de datos,
+comunicacion entre tus aplicaciones y servicios de correo
+electronico.
