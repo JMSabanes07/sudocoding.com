@@ -3,17 +3,13 @@ import Link from 'next/link'
 
 // components
 import { PageContainer } from 'components/theme/pageContainer'
-import {
-  Title,
-  Container,
-  AboutContainer,
-  ContactContainer,
-} from './about.styles'
+import { Container, AboutContainer, ContactContainer } from './about.styles'
 import Layout from 'components/layout'
 import Tag from 'components/tag'
 import { Button, ButtonContainer } from 'components/buttons'
 import { AsciiArt } from 'components/asciiArt'
 import Article from 'components/article'
+import { Title, H2, H1 } from 'components/title'
 
 const About = () => (
   <PageContainer disableAlign>
@@ -24,10 +20,12 @@ const About = () => (
     <Container>
       <Title>
         <Tag tag="h2">
-          <h2>Building A Part Of Your Future</h2>
+          <H2 size="2rem">Building A Part Of Your Future</H2>
         </Tag>
         <Tag tag="h1">
-          <h1>We are Sudo Coding</h1>
+          <H1 size="1.2rem" background="highlight">
+            We are Sudo Coding
+          </H1>
         </Tag>
       </Title>
       <AboutContainer>

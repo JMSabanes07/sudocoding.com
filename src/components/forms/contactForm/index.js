@@ -2,6 +2,7 @@
 import { FormContainer } from '../form'
 import { Input, Textarea } from '../inputs'
 import { useForm } from 'react-hook-form'
+import { Button, ButtonContainer } from 'components/buttons'
 
 const ContactForm = () => {
   const { register, handleSubmit, reset } = useForm()
@@ -13,9 +14,17 @@ const ContactForm = () => {
 
   return (
     <FormContainer onSubmit={handleSubmit(onSubmit)}>
-      <Input type="email" {...register('email')} />
-      <Textarea {...register('text')} />
-      <input type="submit" value="Enviar" />
+      <Input
+        type="email"
+        placeholder="Put your email here"
+        {...register('email')}
+      />
+      <Textarea placeholder="How can we help you?" {...register('text')} />
+      <ButtonContainer>
+        <Button>
+          <input type="submit" value="[0] Send" />
+        </Button>
+      </ButtonContainer>
     </FormContainer>
   )
 }
