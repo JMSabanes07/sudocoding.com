@@ -30,7 +30,7 @@ const About = () => (
       </Title>
       <AboutContainer>
         <Article>
-          <AsciiArt image="frontend" />
+          <AsciiArt image="frontend" lineHeight=".3rem" />
           <h2>Frontend Developmet</h2>
           <p>
             We design, build and program the interfaces of your web apps whith
@@ -40,7 +40,7 @@ const About = () => (
           </p>
         </Article>
         <Article>
-          <AsciiArt image="backend" align="flex-end" />
+          <AsciiArt image="backend" align="flex-end" lineHeight=".3rem" />
           <h2>Backend Development</h2>
           <p>
             So that you can have complete interactivity with your users or

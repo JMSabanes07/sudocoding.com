@@ -48,10 +48,10 @@ const Home = () => {
       </PortadaContainer>
       <ButtonContainer align="center">
         <Link href="/contact">
-          <Button isActive>[1] Get in touch</Button>
+          <Button isActive>[0] Get in touch</Button>
         </Link>
         <Link href="/portfolio">
-          <Button>[2] See my work</Button>
+          <Button>[1] See my work</Button>
         </Link>
       </ButtonContainer>
     </PageContainer>

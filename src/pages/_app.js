@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps, router }) {
             animate={{ x: 0 }}
             exit={{ x: '100vw' }}
             style={{ display: 'flex' }}
+            transition={{ type: 'spring', bounce: 0, duration: 0.3 }}
           >
             <Component {...pageProps} />
           </motion.div>

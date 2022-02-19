@@ -22,13 +22,21 @@ export const Button = styled.div`
   }
   :hover {
     color: ${(props) => props.theme.bg};
+    * {
+      color: ${(props) => props.theme.bg};
+    }
     :after {
       left: 0;
     }
   }
 `
 
+/**
+ * @param {string} col (opcional) Refiere a la columna a la cual pertenece este elemento, la propiedad es grid-columns; no funciona si el elemento padre no posee un grid-template-columns
+ */
+
 export const ButtonContainer = styled.section`
+  grid-column: ${(props) => props.col};
   display: flex;
   justify-content: center;
   align-items: ${(props) => props.align || 'flex-start'};

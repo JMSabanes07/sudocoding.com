@@ -17,6 +17,12 @@ export const H2 = styled.h2`
   color: ${(props) => (props.background ? props.theme.bg : 'none')};
   font-size: ${(props) => props.size || 'inherit'}; ;
 `
+export const H4 = styled.h4`
+  background-color: ${(props) => props.theme[props.background]};
+  color: ${(props) => (props.background ? props.theme.bg : 'none')};
+  padding: ${(props) => props.padding};
+  font-size: ${(props) => props.size}; ;
+`
 
 export const Title = styled.div`
   grid-area: title;

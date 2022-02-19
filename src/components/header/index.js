@@ -14,13 +14,13 @@ const Header = () => {
       <List>
         <li>
           <Link href="/">
-            <Button isActive={router.asPath === '/'}>{'[1] <Home />'}</Button>
+            <Button isActive={router.asPath === '/'}>{'[0] Home'}</Button>
           </Link>
         </li>
         <li>
           <Link href="/portfolio">
             <Button isActive={router.asPath === '/portfolio'}>
-              {'[2] <Portfolio />'}
+              {'[1] Portfolio'}
             </Button>
           </Link>
         </li>
@@ -30,14 +30,14 @@ const Header = () => {
         <li>
           <Link href="/about">
             <Button isActive={router.asPath === '/about'}>
-              {'[3] <About us />'}
+              {'[2] About us'}
             </Button>
           </Link>
         </li>
         <li>
           <Link href="/contact">
             <Button isActive={router.asPath === '/contact'}>
-              {'[4] <Contact />'}
+              {'[3] Contact'}
             </Button>
           </Link>
         </li>

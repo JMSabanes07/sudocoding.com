@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
 `
 
 export const TagContainer = styled.div`
+  grid-column: ${(props) => props.col};
   display: flex;
   flex-basis: auto;
   position: relative;
