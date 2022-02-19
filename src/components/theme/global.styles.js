@@ -32,7 +32,7 @@ export const GlobalCss = createGlobalStyle`
   }
   @font-face {
     font-family: "Lucida Console";
-    src: url("/fonts/LucidaConsole.ttf");
+    src: url("/fonts/LucidaConsole.woff");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
