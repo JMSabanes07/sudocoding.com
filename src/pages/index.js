@@ -50,7 +50,7 @@ const Home = () => {
         <Link href="/contact">
           <Button isActive>[0] Get in touch</Button>
         </Link>
-        <Link href="/portfolio">
+        <Link href="/works">
           <Button>[1] See my work</Button>
         </Link>
       </ButtonContainer>

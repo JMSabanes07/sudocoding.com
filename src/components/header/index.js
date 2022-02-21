@@ -18,10 +18,8 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link href="/portfolio">
-            <Button isActive={router.asPath === '/portfolio'}>
-              {'[1] Portfolio'}
-            </Button>
+          <Link href="/works">
+            <Button isActive={router.asPath === '/works'}>{'[1] Works'}</Button>
           </Link>
         </li>
       </List>

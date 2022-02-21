@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Posts {
+  id        Int      @id @default(autoincrement())
+  title     String   @db.VarChar(255)
+  text      String   @db.Text
+  link      String   @db.VarChar(255)
+  github    String   @db.VarChar(255)
+  tags      Tags[]
+  createdAt DateTime @default(now())
+}
+
+model Tags {
+  id    Int     @id @default(autoincrement())
+  name  String  @db.VarChar(30)
+  posts Posts[]
+}

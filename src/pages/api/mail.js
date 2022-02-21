@@ -27,6 +27,8 @@ const handleValidations = (props) => {
 }
 
 const handler = async (req, res) => {
+  if (req.method !== 'POST') return res.status(400).send('unauthorized')
+
   const { name, lastname, email, text } = req.body
 
   const errors = handleValidations(req.body)
