@@ -7,7 +7,7 @@ import {
   Container,
   AboutContainer,
   ContactContainer,
-} from '../components/pagesStyles/about.styles'
+} from '../../components/pagesStyles/about.styles'
 import Layout from 'components/layout'
 import Tag from 'components/tag'
 import { Button, ButtonContainer } from 'components/buttons'
