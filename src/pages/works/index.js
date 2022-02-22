@@ -8,110 +8,9 @@ import {
   FeraturedContainer,
   OtherContainer,
   Title,
-} from './works.styles'
+} from '../../components/pagesStyles/works.styles'
 import Tag from 'components/tag'
 import WorksList from 'components/works'
-
-// const data = [
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit vitae, adipisci ipsa iusto neque, aliquam quisquam ex nulla saepe eaque omnis, sint quia consequuntur recusandae molestias cupiditate voluptates nisi.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-// ]
-// const data2 = [
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim reprehenderit vitae, adipisci ipsa iusto neque, aliquam quisquam ex nulla saepe eaque omnis, sint quia consequuntur recusandae molestias cupiditate voluptates nisi.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'This web page',
-//     link: 'http://google.com',
-//     text: 'This website is a clear example of a full stack web development, where the use of frontend and backend is combined.',
-//     tags: ['Nextjs', 'React', 'MySQL', 'Prisma', 'Styled Components'],
-//     buttons: [
-//       {
-//         text: 'Go to github',
-//         link: 'http://www.github.com',
-//       },
-//     ],
-//   },
-// ]
 
 const Works = ({ data }) => {
   console.log(data)
@@ -145,7 +44,7 @@ const Works = ({ data }) => {
 
 Works.Layout = Layout
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/posts')
   const data = await res.json()
   console.log(data)

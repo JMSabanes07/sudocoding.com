@@ -3,7 +3,11 @@ import Link from 'next/link'
 
 // components
 import { PageContainer } from 'components/theme/pageContainer'
-import { Container, AboutContainer, ContactContainer } from './about.styles'
+import {
+  Container,
+  AboutContainer,
+  ContactContainer,
+} from '../components/pagesStyles/about.styles'
 import Layout from 'components/layout'
 import Tag from 'components/tag'
 import { Button, ButtonContainer } from 'components/buttons'

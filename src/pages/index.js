@@ -4,7 +4,10 @@ import Link from 'next/link'
 import TypeAnimation from 'react-type-animation'
 
 // components
-import { PortadaContainer, Wrapper } from './index.styles'
+import {
+  PortadaContainer,
+  Wrapper,
+} from '../components/pagesStyles/index.styles'
 import { PageContainer } from 'components/theme/pageContainer'
 import AsciiAnimation from 'components/animation'
 import Tag from 'components/tag'

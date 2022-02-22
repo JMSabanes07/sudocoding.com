@@ -1,15 +1,16 @@
 import Layout from 'components/layout'
 import Head from 'next/head'
-import Link from 'next/link'
 
 // components
 import { PageContainer } from 'components/theme/pageContainer'
-import { ContactContainer, Socials } from './contact.styles'
+import {
+  ContactContainer,
+  Socials,
+} from '../../components/pagesStyles/contact.styles'
 import ContactForm from 'components/forms/contactForm'
 import { Title, H1, H4 } from 'components/title'
 import Tag from 'components/tag'
-import { AsciiArt } from 'components/asciiArt'
-import { Button, ButtonContainer } from 'components/buttons'
+import { Button } from 'components/buttons'
 
 // TODO reemplazar los links de las redes sociales
 
