@@ -13,19 +13,25 @@ export const ArticleContainer = styled.div`
 `
 
 export const Article = styled.article`
-  display: grid;
-  align-content: space-between;
+  height: 14.313rem;
   padding: 1.8rem;
   border: 1px solid ${(props) => props.theme.textDark};
   cursor: pointer;
   :hover {
     border-color: ${(props) => props.theme.highlight};
   }
+  a {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    align-content: flex-start;
+    height: 100%;
+  }
   header {
     width: 100%;
   }
   footer {
     width: 100%;
+    align-self: flex-end;
   }
   h1 {
     width: 100%;

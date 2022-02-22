@@ -1,5 +1,7 @@
 {
   "name": "portfolio-sudo",
+  "version": "1.0.0",
+  "description": "Sudo coding main page",
   "private": true,
   "scripts": {
     "dev": "next dev",
