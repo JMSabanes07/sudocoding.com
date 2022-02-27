@@ -33,10 +33,10 @@ const About = () => (
           <AsciiArt image="frontend" lineHeight=".3rem" />
           <h2>Frontend Developmet</h2>
           <p>
-            We design, build and program the interfaces of your web apps whith
-            &#34;react js&#34;, created by facebook is one of the most used
-            frameworks today, building very fast applications and without page
-            reloads.
+            We design, build and program the interface of your web apps whith
+            &#34;react js&#34;, created by facebook which one of the most used
+            frameworks nowadays, allowing the construction of the fastest
+            applications possible without the need of reload pages
           </p>
         </Article>
         <Article>
