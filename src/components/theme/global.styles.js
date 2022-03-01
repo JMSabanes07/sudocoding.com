@@ -37,6 +37,13 @@ export const GlobalCss = createGlobalStyle`
     font-weight: 400;
     font-display: swap;
   }
+  @font-face {
+    font-family: "Courier new";
+    src: url("/fonts/CourierNew400.woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
 
   html{
     font-size: 18px;
