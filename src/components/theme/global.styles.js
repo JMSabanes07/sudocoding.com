@@ -39,7 +39,14 @@ export const GlobalCss = createGlobalStyle`
   }
 
   html{
-    @media (min-width: 1536px) {
+    font-size: 18px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1024px) {
       font-size: 18px;
     }
   }

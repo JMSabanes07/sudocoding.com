@@ -14,10 +14,7 @@ const AsciiAnimation = () => {
         animarionRef.current.innerText = animation[frames]
       }
     }, 29)
-    return () => {
-      console.log('returning')
-      console.log(clearTimeout(timer))
-    }
+    return () => clearTimeout(timer)
   }, [])
 
   return (

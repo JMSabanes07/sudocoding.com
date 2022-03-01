@@ -1,5 +1,6 @@
 import Layout from 'components/layout'
 import Head from 'next/head'
+import styled from 'styled-components'
 
 // components
 import { PageContainer } from 'components/theme/pageContainer'
@@ -12,8 +13,33 @@ import {
 import Tag from 'components/tag'
 import WorksList from 'components/works'
 
+const NoData = () => {
+  const AsciiStyle = styled.pre`
+    font-size: 0.3rem;
+    @media (max-width: 560px) {
+      font-size: 0.15rem;
+      line-height: 0.25rem;
+    }
+  `
+  // prettier-ignore
+  const str = `
+   _   _                                                                          _                 _         
+  | \\ | |   ___      _ __ ___     ___    _ __    ___     _ __    _ __    ___     (_)   ___    ___  | |_   ___ 
+  |  \\| |  / _ \\    |  _   _ \\   / _ \\  | '__|  / _ \\   |  _ \\  |  __|  / _ \\    | |  / _ \\  / __| | __| / __|
+  | |\\  | | (_) |   | | | | | | | (_) | | |    |  __/   | |_) | | |    | (_) |   | | |  __/ | (__  | |_  \\__ \\
+  |_| \\_|  \\___/    |_| |_| |_|  \\___/  |_|     \\___|   | .__/  |_|     \\___/   _/ |  \\___|  \\___|  \\__| |___/
+                                                        |_|                    |__/                           
+  
+   ___                               _              
+  /  _|   ___    _   _   _ __     __| |    _    ___ 
+  | |_   / _ \\  | | | | |  _ \\   / _  |   (_)  / __|
+  |  _| | (_) | | |_| | | | | | | (_| |    _  | (__ 
+  |_|    \\___/   \\__,_| |_| |_|  \\__,_|   (_)  \\___|
+  `
+  return <AsciiStyle>{str}</AsciiStyle>
+}
+
 const Works = ({ data }) => {
-  console.log(data)
   return (
     <PageContainer padding="3rem 0 4rem 0">
       <Head>
@@ -35,6 +61,7 @@ const Works = ({ data }) => {
               <h2>Other Noteworthy Projects</h2>
             </Tag>
           </Title>
+          {!data.slice(3)[0] && <NoData />}
           <WorksList data={data} from="3" />
         </OtherContainer>
       </WorksContainer>

@@ -7,13 +7,14 @@ import {
   Container,
   AboutContainer,
   ContactContainer,
+  TitleContainer,
 } from '../../components/pagesStyles/about.styles'
 import Layout from 'components/layout'
 import Tag from 'components/tag'
 import { Button, ButtonContainer } from 'components/buttons'
 import { AsciiArt } from 'components/asciiArt'
 import Article from 'components/article'
-import { Title, H2, H1 } from 'components/title'
+import { H2, H1, H3 } from 'components/title'
 
 const About = () => (
   <PageContainer disableAlign>
@@ -22,7 +23,7 @@ const About = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Container>
-      <Title>
+      <TitleContainer>
         <Tag tag="h2">
           <H2 size="2rem">Building A Part Of Your Future</H2>
         </Tag>
@@ -31,7 +32,7 @@ const About = () => (
             We are Sudo Coding
           </H1>
         </Tag>
-      </Title>
+      </TitleContainer>
       <AboutContainer>
         <Article>
           <AsciiArt image="frontend" lineHeight=".3rem" />
@@ -40,7 +41,7 @@ const About = () => (
             We design, build and program the interface of your web apps whith
             &#34;react js&#34;, created by facebook which one of the most used
             frameworks nowadays, allowing the construction of the fastest
-            applications possible without the need of reload pages
+            applications possible without the need of reload pages.
           </p>
         </Article>
         <Article>
@@ -55,12 +56,14 @@ const About = () => (
       </AboutContainer>
       <ContactContainer>
         <Tag tag="h3">
-          <h3>We create solutions to your IT problems</h3>
+          <H3 size="1.2rem">We create solutions to your IT problems</H3>
         </Tag>
         <ButtonContainer padding="1rem 0 0 0 ">
           <Link href="/contact">
             <a>
-              <Button isActive>[0] Get in touch with us</Button>
+              <Button isActive movile>
+                [0] Get in touch with us
+              </Button>
             </a>
           </Link>
         </ButtonContainer>

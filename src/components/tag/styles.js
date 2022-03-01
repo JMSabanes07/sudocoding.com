@@ -9,6 +9,7 @@ export const TagContainer = styled.div`
   display: flex;
   flex-basis: auto;
   position: relative;
+  justify-self: ${(props) => props.justifySelf};
   ${(props) => {
     if (props.position === 'inline')
       return `

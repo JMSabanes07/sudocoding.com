@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { TagContainer } from 'components/tag/styles'
 
 /**
  *
@@ -41,7 +42,10 @@ export const FormContainer = styled.form`
     max-height: 17rem;
     height: 20rem;
   }
-  @media (max-height: 769px) {
+  ${TagContainer} {
+    padding-bottom: 1rem;
+  }
+  @media (max-height: 767px) {
     textarea {
       max-height: 12rem;
       height: 12rem;

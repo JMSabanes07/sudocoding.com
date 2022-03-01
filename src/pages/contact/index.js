@@ -6,6 +6,7 @@ import { PageContainer } from 'components/theme/pageContainer'
 import {
   ContactContainer,
   Socials,
+  LinksContainer,
 } from '../../components/pagesStyles/contact.styles'
 import ContactForm from 'components/forms/contactForm'
 import { Title, H1, H4 } from 'components/title'
@@ -35,15 +36,25 @@ const Contact = () => (
             Social media
           </H4>
         </Tag>
-        <a href="http://instagram.com" target="_blank" rel="noreferrer">
-          <Button>[0] Instagram</Button>
-        </a>
-        <a href="http://linkedin.com" target="_blank" rel="noreferrer">
-          <Button>[1] Linkedin</Button>
-        </a>
-        <a href="http://telegram.com" target="_blank" rel="noreferrer">
-          <Button>[2] Telegram</Button>
-        </a>
+        <LinksContainer>
+          <a
+            href="https://www.instagram.com/sudo_coding/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button>[0] Instagram</Button>
+          </a>
+          <a href="https://t.me/Sudo_coding" target="_blank" rel="noreferrer">
+            <Button>[2] Telegram</Button>
+          </a>
+          <a
+            href="https://github.com/JMSabanes07"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button>[3] Github</Button>
+          </a>
+        </LinksContainer>
       </Socials>
     </ContactContainer>
   </PageContainer>

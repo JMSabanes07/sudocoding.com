@@ -12,12 +12,13 @@ import { TagContainer, OpenTag, CloseTag, Children } from './styles'
 const Tag = ({
   children,
   col,
+  justifySelf,
   tag = 'div',
   position = 'inline',
   highlight = false,
 }) => {
   return (
-    <TagContainer position={position} col={col}>
+    <TagContainer position={position} col={col} justifySelf={justifySelf}>
       <OpenTag position={position}>{`<${tag}>`}</OpenTag>
       <Children position={position} highlight={highlight}>
         {children}

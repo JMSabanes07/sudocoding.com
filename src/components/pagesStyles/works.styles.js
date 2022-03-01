@@ -10,15 +10,19 @@ export const WorksContainer = styled.div`
 
 export const Title = styled.div`
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    @media (max-width: 549px) {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
 `
 
 export const FeraturedContainer = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 `
 export const OtherContainer = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Title, H2, H1 } from 'components/title'
 
 export const Container = styled.div`
   display: grid;
@@ -8,6 +9,7 @@ export const Container = styled.div`
   grid-template-areas:
     'title'
     'about';
+  gap: 3rem;
 `
 export const AboutContainer = styled.div`
   display: grid;
@@ -15,15 +17,11 @@ export const AboutContainer = styled.div`
   justify-items: center;
   align-content: flex-start;
   gap: 0.5em;
-
-  h3 {
-    font-size: 1rem;
-    * {
-      color: ${(props) => props.theme.textDark};
-    }
-  }
   p {
     font-size: 0.9rem;
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
   }
 `
 
@@ -34,44 +32,18 @@ export const ContactContainer = styled.div`
   padding: 2rem;
 `
 
-export const Title = styled.div`
-  grid-area: title;
-  justify-self: center;
-  display: grid;
-  justify-items: center;
-  gap: 1rem;
-
-  padding: 2rem;
-  h2 {
-    font-size: 2rem;
+export const TitleContainer = styled(Title)`
+  @media (max-width: 575px) {
+    ${H2} {
+      font-size: 1.5rem;
+    }
+    ${H1} {
+      font-size: 1rem;
+    }
   }
-  h1 {
-    display: inline;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.5rem;
-    background-color: ${(props) => props.theme.highlight};
-    color: ${(props) => props.theme.bg};
+  @media (min-width: 576px) and (max-width: 767px) {
+    ${H2} {
+      font-size: 1.7rem;
+    }
   }
-`
-
-export const Avatar = styled.div`
-  display: grid;
-  align-items: center;
-  justify-items: flex-end;
-  padding: 1rem;
-  position: relative;
-  img {
-    position: absolute;
-    width: 17rem;
-    object-fit: cover;
-  }
-`
-
-export const BgNumbers = styled.div`
-  position: absolute;
-  width: 17rem;
-  height: 20.4rem;
-  word-break: break-all;
-  font-size: 0.5555rem;
-  overflow: hidden;
 `

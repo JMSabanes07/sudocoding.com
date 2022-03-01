@@ -46,7 +46,7 @@ const ContactForm = () => {
   }
 
   return (
-    <FormContainer onSubmit={handleSubmit(onSubmit)} columns="1fr 1fr">
+    <FormContainer onSubmit={handleSubmit(onSubmit)}>
       <Tag tag="h4" col="1/3">
         <H4 size="1.1rem" background="highlight" padding="0.1rem 0.3rem">
           Send an email

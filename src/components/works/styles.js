@@ -3,12 +3,15 @@ import { Button } from 'components/buttons'
 
 export const ArticleContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 18rem);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: flex-start;
-  gap: 3rem;
-  @media (max-width: 1080px) {
-    gap: 2rem;
-    justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 549px) {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 550px) and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `
 

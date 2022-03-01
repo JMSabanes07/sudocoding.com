@@ -49,12 +49,16 @@ const Home = () => {
         </Wrapper>
         <AsciiAnimation />
       </PortadaContainer>
-      <ButtonContainer align="center">
+      <ButtonContainer align="center" home>
         <Link href="/contact">
-          <Button isActive>[0] Get in touch</Button>
+          <a>
+            <Button isActive>[0] Get in touch</Button>
+          </a>
         </Link>
         <Link href="/works">
-          <Button>[1] See my work</Button>
+          <a>
+            <Button>[1] See our work</Button>
+          </a>
         </Link>
       </ButtonContainer>
     </PageContainer>
