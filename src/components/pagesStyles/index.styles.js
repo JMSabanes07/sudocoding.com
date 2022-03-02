@@ -14,7 +14,7 @@ export const PortadaContainer = styled.section`
   margin-top: 2rem;
   h1 {
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
     white-space: nowrap;
   }

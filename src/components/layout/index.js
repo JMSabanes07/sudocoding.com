@@ -30,15 +30,8 @@ const Layout = ({ children }) => {
   }, [router])
 
   return (
-    <LayoutContainer
-      ref={layoutRef}
-      onScroll={onScroll}
-      // onTouchStart={handleStartSwipe}
-      // onTouchMove={handleMoveSwipe}
-      // onTouchEnd={handleEndSwipe}
-    >
+    <LayoutContainer ref={layoutRef} onScroll={onScroll}>
       <Header offset={offset} />
-      {/* <Nav /> */}
       {children}
     </LayoutContainer>
   )

@@ -13,14 +13,20 @@ import {
 import Tag from 'components/tag'
 import WorksList from 'components/works'
 
+const AsciiStyle = styled.pre`
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.2;
+  letter-spacing: 0.03rem;
+  font-size: 0.4rem;
+  @media (max-width: 560px) {
+    font-size: 0.25rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.2rem;
+  }
+`
+
 const NoData = () => {
-  const AsciiStyle = styled.pre`
-    font-size: 0.3rem;
-    @media (max-width: 560px) {
-      font-size: 0.15rem;
-      line-height: 0.25rem;
-    }
-  `
   // prettier-ignore
   const str = `
    _   _                                                                          _                 _         

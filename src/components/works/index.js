@@ -17,27 +17,33 @@ const Tags = ({ data }) => {
 }
 
 const WorksList = ({ data, from, to }) => {
+  const redirect = (e, link) => {
+    e.stopPropagation()
+    if (e.target.getAttribute('type') === 'button') return
+    window.open(link)
+  }
+
   return (
     <ArticleContainer>
       {data?.slice(from, to).map(({ title, text, tags, link, github }, i) => {
         return (
-          <Article key={i}>
-            <a href={link} target="_blank" rel="noreferrer">
-              <header>
-                <h1>{title}</h1>
-              </header>
-              <p title={text}>{text}</p>
-              <footer>
-                <Tags data={tags} />
-                <ButtonContainer align="center">
-                  {github && (
-                    <a key={i} href={github} target="_blank" rel="noreferrer">
-                      <Button isActive>[0] See on github</Button>
-                    </a>
-                  )}
-                </ButtonContainer>
-              </footer>
-            </a>
+          <Article key={i} onClick={(e) => redirect(e, link)}>
+            <header>
+              <h1>{title}</h1>
+            </header>
+            <p title={text}>{text}</p>
+            <footer>
+              <Tags data={tags} />
+              <ButtonContainer align="center">
+                {github && (
+                  <a key={i} href={github} target="_blank" rel="noreferrer">
+                    <Button type="button" isActive>
+                      [0] See on github
+                    </Button>
+                  </a>
+                )}
+              </ButtonContainer>
+            </footer>
           </Article>
         )
       })}

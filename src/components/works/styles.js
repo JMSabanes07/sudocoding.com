@@ -16,6 +16,7 @@ export const ArticleContainer = styled.div`
 `
 
 export const Article = styled.article`
+  display: grid;
   height: 14.313rem;
   padding: 1.8rem;
   border: 1px solid ${(props) => props.theme.textDark};
